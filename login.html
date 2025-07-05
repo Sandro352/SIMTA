@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login SIMTA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(to right, #e3f2fd, #e8f5e9);
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .login-box {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 1rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .login-box img {
+        width: 90px;
+        margin-bottom: 15px;
+      }
+
+      .login-box h3 {
+        margin-bottom: 25px;
+        color: #198754;
+      }
+
+      .form-label {
+        font-weight: 500;
+      }
+
+      .btn-primary {
+        background-color: #198754;
+        border: none;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .btn-primary:hover {
+        background-color: #145c39;
+      }
+
+      .text-muted small {
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/id/f/f3/Logo_Unjani.png"
+        alt="Logo SIMTA"
+      />
+      <h3>Login SIMTA</h3>
+      <form id="loginForm">
+        <div class="mb-3 text-start">
+          <label for="email" class="form-label">Username (Email)</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            required
+            placeholder="cth: mhs.joko@unjani.ac.id"
+          />
+        </div>
+        <div class="mb-3 text-start">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" required />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
+      <p class="text-muted mt-3">
+        <small
+          >Gunakan email dengan awalan sesuai peran:<br />mhs / dsn / koor /
+          admin / kaprodi</small
+        >
+      </p>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const email = document
+            .getElementById("email")
+            .value.trim()
+            .toLowerCase();
+
+          let targetPage = "";
+
+          if (email.startsWith("mhs")) {
+            targetPage = "mahasiswa.html";
+          } else if (email.startsWith("dsn")) {
+            targetPage = "dosen.html";
+          } else if (email.startsWith("koor")) {
+            targetPage = "koordinator.html";
+          } else if (email.startsWith("admin")) {
+            targetPage = "admin.html";
+          } else if (email.startsWith("kaprodi")) {
+            targetPage = "kaprodi.html";
+          } else {
+            alert("Email tidak dikenali. Gunakan awalan sesuai peran Anda.");
+            return;
+          }
+
+          window.location.href = targetPage;
+        });
+    </script>
+  </body>
+</html>

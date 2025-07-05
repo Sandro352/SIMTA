@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verifikasi Dokumen Akhir</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #fff0f1;
+      }
+      .container {
+        max-width: 900px;
+        margin-top: 40px;
+      }
+      .table th,
+      .table td {
+        vertical-align: middle;
+      }
+      .btn-verifikasi {
+        min-width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container bg-white p-4 rounded shadow">
+      <h3 class="text-danger mb-4">Verifikasi Dokumen Akhir Mahasiswa</h3>
+      <table class="table table-bordered align-middle">
+        <thead class="table-danger">
+          <tr>
+            <th>Nama Mahasiswa</th>
+            <th>Judul TA</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Wildan Wibowo</td>
+            <td>Deteksi dan Analisis Jejak Digital pada Aplikasi Chat</td>
+            <td><span class="badge bg-warning text-dark">Menunggu</span></td>
+            <td>
+              <button class="btn btn-success btn-verifikasi">Setujui</button>
+              <button class="btn btn-danger btn-verifikasi">Tolak</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Nabil</td>
+            <td>Analisis Kerentanan Serangan pada Dompet Kripto</td>
+            <td><span class="badge bg-success">Disetujui</span></td>
+            <td>
+              <button class="btn btn-secondary btn-verifikasi" disabled>
+                Sudah Diverifikasi
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

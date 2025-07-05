@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penjadwalan Ujian</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #fff3cd;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .container {
+        margin-top: 40px;
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container bg-white p-4 rounded shadow">
+      <h3 class="text-warning mb-4">Penjadwalan Ujian Tugas Akhir</h3>
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Nama Mahasiswa</label>
+          <input type="text" class="form-control" value="Nabil" readonly />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tanggal Ujian</label>
+          <input type="date" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Waktu</label>
+          <input type="time" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ruang</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Contoh: Lab TI 3"
+          />
+        </div>
+        <button type="submit" class="btn btn-warning">Simpan Jadwal</button>
+      </form>
+    </div>
+  </body>
+</html>
